@@ -5,6 +5,7 @@
 
 #include <QPushButton>
 #include <QWidget>
+#include <QDebug>
 
 class Widget : public QWidget
 {
@@ -16,6 +17,7 @@ public:
     void mySlot();
     void changeWindow();
     void subChangeWindow();
+    void dealSlot(int, QString);
 private:
     QPushButton btn1;
     QPushButton *btn2;

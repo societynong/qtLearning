@@ -14,6 +14,7 @@ SubWidget::SubWidget(QWidget *parent) : QWidget(parent)
 void SubWidget::sendSlot()
 {
     emit mySwitch();
+    emit mySignal(111,"木哈哈哈");
 }
 
 void SubWidget::changeWindow()

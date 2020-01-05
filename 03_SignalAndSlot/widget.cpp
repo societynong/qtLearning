@@ -31,6 +31,8 @@ Widget::Widget(QWidget *parent)
     btn3.show();
     connect(&btn3, &QPushButton::released, this, &Widget::changeWindow);
     connect(&sw, &SubWidget::mySwitch, this, &Widget::subChangeWindow);
+    void (SubWidget::*pSigPara)(int, QString) = &SubWidget::mySignal;
+    connect(&sw, pSigPara, this, &Widget::dealSlot);
 //    sw.show();
 }
 
@@ -54,4 +56,9 @@ void Widget::subChangeWindow()
 {
     sw.hide();
     show();
+}
+
+void Widget::dealSlot(int i, QString str)
+{
+    qDebug() << i << " " << str;
 }

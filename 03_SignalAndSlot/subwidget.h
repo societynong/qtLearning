@@ -11,6 +11,7 @@ public:
     void sendSlot();
 signals:
     void mySwitch();
+    void mySignal(int, QString);
 public slots:
     void changeWindow();
 private:
