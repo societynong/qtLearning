@@ -17,6 +17,11 @@ public:
     Widget(QWidget *parent = nullptr);
     ~Widget();
 
+private slots:
+    void on_buttonSubmit_clicked();
+
+    void on_buttonClear_clicked();
+
 private:
     Ui::Widget *ui;
     QTcpServer *ptcpServer;
