@@ -47,7 +47,7 @@ void Widget::paintEvent(QPaintEvent *)
     int ny = (clickY - margin) / dy;
 
     if(clickX >= margin && clickY >= margin && nx >= 0 && nx < n && ny >= 0 && ny < m)
-        p.drawEllipse(QPoint(margin + dx / 2 + dx * nx,margin + dy / 2 + dy * ny),10,10);
+        p.drawEllipse(QPoint(margin + dx / 2 + dx * nx,margin + dy / 2 + dy * ny), dx * 1 / 3 , dy * 1 / 3);
     p.end();
 }
 
